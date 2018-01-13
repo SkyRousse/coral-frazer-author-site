@@ -2,17 +2,30 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Quattrocento:400,700');
+
+$base-font-family: 'Montserrat', sans-serif !default;
 $base-font-size:   16px !default;
-$base-font-weight: 400 !default;
+$mega-font-size: 6rem;
+$h1-font-size: 4.2rem;
+$h2-font-size: 2.4rem;
+$h3-font-size: 1.8rem;
+$h4-font-size: 1.4rem;
+$base-font-weight: 300 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
+$headings-font-family: 'Quattrocento', serif;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     1.9rem !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$text-color:       #333333 !default;
+$background-color: #f8f8f8 !default;
+
+$red-color:      #f67280 !default;
+$mauve-color: #c06c84;
+$light-mauve: #fbe5eb;
+$purple-color: #6c5b7b;
+$blue-color: #355c7d;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -21,29 +34,77 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 // Width of the content area
 $content-width:    800px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
 }
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
 
+// Use media queries like this:
+// .phone-up {
+//   background: purple;
+// }
+
+// .phone-only {
+//   @include for-phone-only { background: purple; }
+// }
+
+// .tablet-portait-only {
+//   @include for-tablet-portait-only { background: purple; }
+// }
+
+// .tablet-portrait-up {
+//   @include for-tablet-portrait-up { background: purple; }
+// }
+
+// .tablet-landscape-only {
+//   @include for-tablet-landscape-only { background: purple; }
+// }
+
+// .tablet-landscape-up {
+//   @include for-tablet-landscape-up { background: purple; }
+// }
+
+// .desktop-only {
+//   @include for-desktop-only { background: purple; }
+// }
+
+// .desktop-up {
+//   @include for-desktop-up { background: purple; }
+// }
+
+// .big-desktop-up {
+//   @include for-big-desktop-up { background: purple; }
+// }
+
 // Import partials.
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/flex",
+  "minima/gradient-bar"
 ;

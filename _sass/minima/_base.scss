@@ -15,7 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
+  color: $grey-color-dark;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -82,8 +82,16 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-family: ($headings-font-family);
+  font-weight: ($base-font-weight);
+  text-align: center;
 }
+
+.mega { font-size:$mega-font-size; }
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
 
 
 
@@ -91,15 +99,12 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $mauve-color;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  transition: 0.3s;
 
   &:hover {
-    color: $text-color;
+    color: $blue-color;
     text-decoration: underline;
   }
 
@@ -123,6 +128,7 @@ blockquote {
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
+  position: relative;
 
   > :last-child {
     margin-bottom: 0;
@@ -171,7 +177,7 @@ pre {
   padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include for-tablet-landscape-up {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
@@ -179,8 +185,16 @@ pre {
   }
 }
 
+/**
+* float
+*/
+.left {
+  float: left;
+}
 
-
+.right {
+  float: right;
+}
 /**
  * Clearfix
  */
@@ -212,4 +226,19 @@ pre {
   li + li {
     padding-top: 5px;
   }
+}
+
+
+/**
+* Visibility
+*/
+.hide {
+  display: none;
+}
+
+/**
+* Positioning
+*/
+.text-center {
+  text-align: center;
 }

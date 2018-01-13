@@ -1,0 +1,19 @@
+.gradient-bar {
+    position:relative;
+
+    &:after {
+        content: "";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:0.5rem;
+        background:  linear-gradient(to right, 
+            #fffbf9 0%, #fffdf8 20%,
+            #fdf2d5 20%, #fde9d0 50%,
+            #f8c6cb 50%, #f8c6cb 90%,
+            #f8ccd6 90%, #f8ccd6 90%
+        ) center/25%  repeat;
+
+    }
+}
