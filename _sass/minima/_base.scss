@@ -13,6 +13,9 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+ html {
+   font-size: $base-font-size;
+ }
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $grey-color-dark;
@@ -86,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: ($base-font-weight);
   text-align: center;
 }
+// for phone up
 
 .mega { font-size:$mega-font-size; }
 h1, .h1 { font-size: $h1-font-size; }
@@ -93,8 +97,34 @@ h2, .h2 { font-size: $h2-font-size; }
 h3, .h3 { font-size: $h3-font-size; }
 h4, .h4 { font-size: $h4-font-size; }
 
-
-
+@include for-tablet-portrait-up {
+  .mega { @include relative-tablet-portrait-font-size($mega-font-size); }
+  h1, .h1 { @include relative-tablet-portrait-font-size($h1-font-size); }
+  h2, .h2 { @include relative-tablet-portrait-font-size($h2-font-size); }
+  h3, .h3 { @include relative-tablet-portrait-font-size($h3-font-size); }
+  h4, .h4 { @include relative-tablet-portrait-font-size($h4-font-size); }
+ }
+@include for-tablet-landscape-up {
+  .mega { @include relative-tablet-landscape-font-size($mega-font-size); }
+  h1, .h1 { @include relative-tablet-landscape-font-size($h1-font-size); }
+  h2, .h2 { @include relative-tablet-landscape-font-size($h2-font-size); }
+  h3, .h3 { @include relative-tablet-landscape-font-size($h3-font-size); }
+  h4, .h4 { @include relative-tablet-landscape-font-size($h4-font-size); }
+ }
+@include for-desktop-up {
+  .mega { @include relative-desktop-font-size($mega-font-size); }
+  h1, .h1 { @include relative-desktop-font-size($h1-font-size); }
+  h2, .h2 { @include relative-desktop-font-size($h2-font-size); }
+  h3, .h3 { @include relative-desktop-font-size($h3-font-size); }
+  h4, .h4 { @include relative-desktop-font-size($h4-font-size); }
+ }
+@include for-big-desktop-up {
+  .mega { @include relative-big-desktop-font-size($mega-font-size); }
+  h1, .h1 { @include relative-big-desktop-font-size($h1-font-size); }
+  h2, .h2 { @include relative-big-desktop-font-size($h2-font-size); }
+  h3, .h3 { @include relative-big-desktop-font-size($h3-font-size); }
+  h4, .h4 { @include relative-big-desktop-font-size($h4-font-size); }
+ }
 /**
  * Links
  */
