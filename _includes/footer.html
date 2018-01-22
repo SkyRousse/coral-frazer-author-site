@@ -1,46 +1,34 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+  <h2 class="footer-heading">{{ site.title | escape }}</h2>
+  <div class="flex-container wrap">
+    <div class="flex-container wrap flex-item _75-desktop-up">
+      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
         <ul class="contact-list">
           <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
+            Get in Touch
+          </li>
+          {% if site.email %}
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+  
+      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
+        <ul class="purchase-links">
+        <li>Buy the Book</li>
+          {% for link in site.purchaseLinks %}
+            <li>
+              <a href="{{link.url}}" alt="{{link.title}}" target="_blank">{{link.title}}</a>
             </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
+          {% endfor %}
         </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
+  
+      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
         <p>{{ site.description | escape }}</p>
       </div>
+  
     </div>
-
   </div>
 
 </footer>

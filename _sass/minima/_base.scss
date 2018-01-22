@@ -141,14 +141,23 @@ a {
     text-decoration: underline;
   }
 
-  .social-media-list &:hover {
+  .purchase-links &:hover {
     text-decoration: none;
 
     .username {
       text-decoration: underline;
     }
   }
+  &.no-bling {
+    color: $grey-color-dark;
+  }
+  &.no-bling:hover {
+    text-decoration: none;
+    color: $grey-color-dark;
+  }
 }
+
+
 
 
 /**
@@ -251,7 +260,7 @@ pre {
   }
 }
 
-.social-media-list {
+.purchase-links {
   .icon {
     padding-right: 5px;
   }

@@ -4,16 +4,17 @@ layout: default
 
 <div class="home">
   <section class="banner-section">
-    <a class="light-mauve" href="/">
-      <header class="banner-header" role="heading">
-        <h3 class="mega">New Book Release</h3>
-      </header>
-    </a>
+    <header class="banner-header" role="heading">
+      <h3 class="mega">New Book Release</h3>
+    </header>
   </section>
-  <section class="text-block gradient-bar">
-    <h1>Economic Inequality</h1>
-    <h2 class="h3">The American Dream Under Siege</h2>
-  </section>
+  <a class="light-mauve no-bling" href="/bio">
+    <section class="text-block gradient-bar">
+      <h1>Economic Inequality</h1>
+      <h2 class="h3">The American Dream Under Siege</h2>
+      <h3 class='h4 bottom-bar-cta'>Learn More</h3>
+    </section>
+  </a>
   <section class="featured">
     <div class="flex-container row wrap vert-center">
       <div class="flex-item _875-phone-up _33-desktop-up">
@@ -24,6 +25,16 @@ layout: default
       <div class="flex-item _875-phone-up _33-desktop-up text-center">
         <img class="height-300" alt="Economic Inequality by Coral Frazer" src="/images/econmonic-inequality-book-cover-small.jpg"
         />
+      </div>
+    </div>
+  </section>
+  <section class="author">
+    <div class="flex-container row wrap">
+      <div class="flex-item _875-phone-up">
+        <img src="/images/Coral-Frazer-Author.jpg" alt="Author Coral Frazer scenic outdoor headshot" />
+      </div>
+      <div class="text-block gradient-bar flex-item _875-phone-up">
+        <p class="h3">{{ site.description | escape }}</p>
       </div>
     </div>
   </section>

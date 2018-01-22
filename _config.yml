@@ -22,18 +22,20 @@ description: >- # this means to ignore newlines until "baseurl:"
   Foreign Language (TOEFL).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "coralcelestefrazer.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
 
 permalink: /:categories/:title
 
-links:
-  - title: economic inequality
-    url: /economic-inequality
-  - title: bio
-    url: /bio
-  - title: resources
-    url: /resources
+purchaseLinks:
+  - title: Indiebound 
+    url: https://www.indiebound.org/search/book?keys=economic+inequality+frazer
+  - title: Barnes and Noble 
+    url: https://www.barnesandnoble.com/w/economic-inequality-coral-celeste-frazer/1127204973?ean=9781512431070
+  - title: Amazon 
+    url: http://a.co/aKQ0f6w
+  - title: Lerner Books 
+    url: https://www.lernerbooks.com/Search/Pages/results.aspx?k=yqzpdka
+
 
 # Build settings
 markdown: kramdown
