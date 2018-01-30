@@ -43,6 +43,31 @@ function showNav() {
 }
 
 
+/** =================================================
+    hide / show logo in footer
+================================================== */
+
+var logoElement = $('footer .logo');
+
+var footerTimerVar = setInterval(function () { footerAnimationTimer() }, 200);
+
+function footerAnimationTimer() {
+
+    var windowCheck = $(window).scrollTop() + $(window).height();
+    var docCheck = $(document).height() - 100;
+
+    if ( windowCheck >  docCheck){
+
+        $(logoElement).addClass('show');
+
+    } else if ($(logoElement).hasClass('show') && windowCheck > docCheck - 150) {
+
+        $(logoElement).removeClass('show');
+
+    }
+};
+
+
 
 /** =================================================
     about page | bio section hide and show photos
@@ -63,7 +88,7 @@ if ($('.about-page').length) {
     var bookParagraphPos = bookParagraph.offset().top;
     
     
-    var myVar = setInterval(function () { aboutPageTimer() }, 500);
+    var imgTimerVar = setInterval(function () { aboutPageTimer() }, 500);
     
     function aboutPageTimer() {
         var scrollPosition = $(window).scrollTop();

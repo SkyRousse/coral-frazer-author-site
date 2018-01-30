@@ -4,7 +4,7 @@
     <div class="flex-item">
       {% assign default_paths = site.pages | map: "path" %}
       {% assign page_paths = site.header_pages | default: default_paths %}
-      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <a class="site-title bling" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     </div>
     <div class='flex-item'>
       {% if page_paths %}
@@ -23,8 +23,14 @@
           <div class="trigger">
             {% for path in page_paths %}
               {% assign my_page = site.pages | where: "path", path | first %}
-              {% if my_page.title %}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {% if my_page.url == "/books/economic-inequality" %}
+              <div class='has-sub-menu'><a class="page-link">Books</a>              
+                <div class="submenu">
+                  <a class="page-link bling" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                </div>
+              </div>
+              {% elsif my_page.title %}
+              <a class="page-link bling" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
               {% endif %}
             {% endfor %}
           </div>

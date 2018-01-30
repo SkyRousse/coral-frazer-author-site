@@ -1,0 +1,8 @@
+<ul class="purchase-links">
+    <li class="link-heading">Buy the Book</li>
+    {% for link in site.purchaseLinks %}
+    <li>
+        <a href="{{link.url}}" alt="{{link.title}}" target="_blank">{{link.title}}</a>
+    </li>
+    {% endfor %}
+</ul>

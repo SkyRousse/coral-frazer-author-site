@@ -1,33 +1,31 @@
 <footer class="site-footer">
-  <h2 class="footer-heading">{{ site.title | escape }}</h2>
-  <div class="flex-container wrap">
-    <div class="flex-container wrap flex-item _75-desktop-up">
-      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
-        <ul class="contact-list">
-          <li>
-            Get in Touch
-          </li>
-          {% if site.email %}
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
-        </ul>
-      </div>
-  
-      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
-        <ul class="purchase-links">
-        <li>Buy the Book</li>
-          {% for link in site.purchaseLinks %}
+  <div class="footer-inner">
+    <div class="logo">
+      <img src="/assets/images/magic-rainbow-footer.png" alt="rainbow silhouette logo" />
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    </div>
+    <div class="flex-container wrap">
+      <div class="flex-container wrap flex-item _75-desktop-up">
+        <div class="flex-item _75-phone-up _33-tablet-landscape-up">
+          <ul class="contact-list">
             <li>
-              <a href="{{link.url}}" alt="{{link.title}}" target="_blank">{{link.title}}</a>
+              Get in Touch
             </li>
-          {% endfor %}
-        </ul>
+            {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+    
+        <div class="flex-item _75-phone-up _33-tablet-landscape-up">
+           {% include purchase-links.html %}
+        </div>
+    
+        <div class="flex-item _75-phone-up _33-tablet-landscape-up">
+          <p>{{ site.description | escape }}</p>
+        </div>
+    
       </div>
-  
-      <div class="flex-item _75-phone-up _33-tablet-landscape-up">
-        <p>{{ site.description | escape }}</p>
-      </div>
-  
     </div>
   </div>
 
