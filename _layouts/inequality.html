@@ -16,5 +16,20 @@ layout: default
     </section>
 </div>
 
-</blockquote>
-<p class="byline right"></p>
+<section class="resources">
+    <h3 class="h2">Resources</h3>
+    <div class="flex-container wrap">
+        {% for article in site.data.inequality_resources.experiments.articles %}
+        <div class="flex-item _875-phone-up _33-desktop-up">
+            <a class='link' href="{{ article.url }}">
+                <div class='article-data'>
+                    <h4 class='title'>{{article.title}}</h4>
+                    <h5 class='author'></h5>
+                    <p class='publication'></p>
+                    <p class='date'></p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

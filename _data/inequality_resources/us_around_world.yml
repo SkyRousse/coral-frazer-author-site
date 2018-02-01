@@ -1,0 +1,30 @@
+name: Inequality in the US and Around the World
+articles: 
+  - title: Global Inequality Might Be Much Worse Than We Think
+    author: Jason Hickel
+    publication: The Guardian
+    url: https://www.theguardian.com/global-development-professionals-network/2016/apr/08/global-inequality-may-be-much-worse-than-we-think
+    date: April 8, 2016
+  - title: What Tames Inequality? Violence and Mayhem
+    author: Walter Scheidel
+    publication: The Chronicle of Higher Education
+    url: http://www.chronicle.com/article/What-Tames-Inequality-/239074
+    date: February 2, 2017
+  - title: The American Dream, Quantified at Last
+    author: David Leonhardt
+    publication: New York Times
+    url: https://www.nytimes.com/2016/12/08/opinion/the-american-dream-quantified-at-last.html
+    date: December 8, 2016
+  - title: Why You Might Not Want to Take Away a Billionaire’s Money
+    author: Jeff Sommer
+    publication: New York Times
+    url: https://www.nytimes.com/2017/02/19/your-money/why-you-might-not-want-to-take-away-a-billionaires-money.html?mwrsm=Email 
+    date: February 19, 2017
+
+orgs:
+  - title: Institute for Policy Studies
+    institution: Inequality.org
+    url: http://inequality.org/ 
+  - title: Inequality for All
+    insitution:
+    url: http://inequalityforall.com/
