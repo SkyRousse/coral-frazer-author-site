@@ -16,13 +16,15 @@ layout: default
     </section>
 </div>
 
-<section class="resources">
-    <h3 class="h2">Resources</h3>
+<section class="resources experiments">
+     {% assign experiments_resources = site.data.inequality_resources.experiments %}
+     {% assign articles = experiments_resources.articles %}
+    <h3 class="h2">{{experiments_resources.name}}</h3>
     <div class="flex-container wrap">
-        {% for article in site.data.inequality_resources.experiments.articles %}
-        <div class="flex-item _875-phone-up _33-desktop-up">
-            <a class='link' href="{{ article.url }}">
-                <div class='article-data'>
+        {% for article in articles %}
+        <div class="flex-item _875-phone-up _33-tablet-portrait-up _25-desktop-up post-it-container">
+            <a class='link no-bling' href="{{ article.url }}">
+                <div class='post-it'>
                     <h4 class='title'>{{article.title}}</h4>
                     <h5 class='author'></h5>
                     <p class='publication'></p>

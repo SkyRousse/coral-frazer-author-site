@@ -382,6 +382,66 @@ a .text-block:hover, .text-block:hover {
   }
 }
 
+/**
+* Post it notes
+*/
+.post-it {
+background:#fefabc; 
+padding: $spacing-unit/3; 
+margin-bottom: $spacing-unit/3;
+max-width: 310px;
+font-family: 'Gloria Hallelujah', cursive; 
+font-size:15px; 
+color: #000;
+height: 14rem; 
+
+box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+-moz-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+-webkit-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+
+&:hover
+  {
+  box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+  -moz-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+  -webkit-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+  }
+}
+
+
+.experiments .post-it-container {
+  &:first-of-type {
+  -moz-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  }
+
+  &:nth-of-type(2) {
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+
+  &:nth-of-type(3) {
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  &:nth-of-type(4) {
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+}
+
 
 
 /**
