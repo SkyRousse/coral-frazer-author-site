@@ -4,29 +4,35 @@ articles:
     author: Sam Polk
     publication: New York Times
     url: https://www.nytimes.com/2014/01/19/opinion/sunday/for-the-love-of-money.html
+    link_source: nytimes.com
     date: January 19, 2014
   - title: Self-Made Wealth in America Robber Barons and Silicon Sultans
     author:
     publication: The Economist
     url: http://www.economist.com/news/briefing/21637338-todays-tech-billionaires-have-lot-common-previous-generation-capitalist
+    link_source: economist.com
     date: December 30, 2014
   - title: What’s It Like to be Rich? Ask the People Who Manage Billionaires’ Money
     author: Vedantam, Shankar and Tara Boyle
     publication: Hidden Brain
     url: http://wbaa.org/post/whats-it-be-rich-ask-people-who-manage-billionaires-money#stream/0
+    link_source: wbaa.org
     date: October 25, 2016
   - title: What Do Billionaires Have in Common? Big Bucks, and Not Much Else
     author: Moyer, Liz
     publication: New York Times
     url: https://www.nytimes.com/2017/02/19/your-money/what-do-billionaires-have-in-common-big-bucks-and-not-much-else.html?mwrsm=Email&_r=0
+    link_source: nytimes.com
     date: February 19, 2017
-  - title: Follow the Money':' Inside the World’s Tax Havens
+  - title: "Follow the Money: Inside the World’s Tax Havens"
     author: Shaxson, Nicholas
     publication: The Guardian
     url:  https://www.theguardian.com/business/2015/jun/19/tax-havens-money-cayman-islands-jersey-offshore-accounts
+    link_source: theguardian.com
     date: June 19, 2015
 
 orgs:
   - title: The World’s Billionaires
     institution: Forbes
     url: http://www.forbes.com/billionaires/list/#version:static
+    link_source: forbes.com

@@ -4,12 +4,11 @@ articles:
     author: Professor G. William Domhoff
     publication: Sociology Dept, University of California at Santa Cruz
     url: http://www2.ucsc.edu/whorulesamerica/
+    link_source: ucsc.edu
     date:
 
 orgs:
   - title: OpenSecrets.org
     institution: Center for Responsive Politics
     url: https://www.opensecrets.org/
-  - title: 
-    insitution:
-    url: 
+    link_source: opensecrets.org

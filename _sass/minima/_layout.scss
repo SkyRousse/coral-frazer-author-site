@@ -371,7 +371,6 @@ a .text-block:hover {
     content: close-quote;
     font-size: 8rem;
     position: absolute;
-    top: 3.6875rem;
     margin-left: .7rem;
     color: $purple-color;
   }
@@ -386,25 +385,85 @@ a .text-block:hover, .text-block:hover {
 * Post it notes
 */
 .post-it {
-background:#fefabc; 
-padding: $spacing-unit/3; 
-margin-bottom: $spacing-unit/3;
-max-width: 310px;
-font-family: 'Gloria Hallelujah', cursive; 
-font-size:15px; 
-color: #000;
-height: 14rem; 
+  background-color:rgb(254, 250, 188); 
+  -webkit-transition: background-color 580ms ease-in-out;
+  -moz-transition: background-color 580ms ease-in-out;
+  -o-transition: background-color 580ms ease-in-out;
+  transition: background-color 580ms ease-in-out;
+  padding: $spacing-unit/3; 
+  margin-bottom: $spacing-unit/3;
+  max-width: 310px;
+  margin: auto;
+  font-family: 'Annie Use Your Telescope', cursive; 
+  font-size:15px; 
+  color: $blue-color;
+  height: 9rem; 
+  position: relative;
 
-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
--moz-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
--webkit-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+  box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+  -moz-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
+  -webkit-box-shadow: 0px 4px 6px rgba(48, 2, 59, 0.6);
 
-&:hover
-  {
-  box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
-  -moz-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
-  -webkit-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+  @include for-tablet-portrait-up {
+    height: 10rem;
   }
+
+  @include for-tablet-landscape-up {
+    height: 14rem;
+  }
+
+  @include for-desktop-up {
+    height: 16rem;
+  }
+
+  &:hover
+    {
+    box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+    -moz-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+    -webkit-box-shadow: 0px 4px 10px rgba(93, 13, 113, 0.6);
+    background-color: rgba(73, 68, 2, 0.6);
+    .show-on-hover {
+        opacity: 1
+      }
+    }
+
+  .author {
+    font-family: 'Annie Use Your Telescope', cursive;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    margin-bottom: 0;
+  }
+  .title {
+    font-family: 'Annie Use Your Telescope', cursive;
+    text-align:left;
+  }
+
+  .publication, .institution {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    margin-bottom: 0;
+  }
+
+  .show-on-hover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -ms-transition: opacity 580ms ease-in-out;
+    -webkit-transition: opacity 580ms ease-in-out;
+    -moz-transition: opacity 580ms ease-in-out;
+    -o-transition: opacity 580ms ease-in-out;
+    transition: opacity 580ms ease-in-out;
+    color: #fff;
+    text-align: center;
+  }
+
 }
 
 

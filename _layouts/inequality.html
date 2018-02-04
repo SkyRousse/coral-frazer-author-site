@@ -19,16 +19,35 @@ layout: default
 <section class="resources experiments">
      {% assign experiments_resources = site.data.inequality_resources.experiments %}
      {% assign articles = experiments_resources.articles %}
+     {% assign orgs = experiments_resources.orgs %}
     <h3 class="h2">{{experiments_resources.name}}</h3>
     <div class="flex-container wrap">
         {% for article in articles %}
-        <div class="flex-item _875-phone-up _33-tablet-portrait-up _25-desktop-up post-it-container">
-            <a class='link no-bling' href="{{ article.url }}">
+        <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+            <a class='link no-bling' target="_blank" href="{{ article.url }}">
                 <div class='post-it'>
-                    <h4 class='title'>{{article.title}}</h4>
-                    <h5 class='author'></h5>
-                    <p class='publication'></p>
-                    <p class='date'></p>
+                    <h4 class='h3 title'>{{article.title}}</h4>
+                    <h5 class='h4 author'>{{article.author}}</h5>
+                    <p class='publication'>{{article.publication}}</p>
+                    <div class='show-on-hover'>
+                        <p class='h3 link-title'>Visit Source</p>
+                        <p class='h4 link-address'>{{article.link_source}}</p>
+                        <p class='date'>{{article.date}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        {% for org in orgs %}
+        <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+            <a class='link no-bling' target="_blank" href="{{ org.url }}">
+                <div class='post-it'>
+                    <h4 class='h3 title'>{{org.title}}</h4>
+                    <h5 class='h4 author'>{{org.institution}}</h5>
+                    <div class='show-on-hover'>
+                        <p class='h3 link-title'>Visit Source</p>
+                        <p class='h4 link-address'>{{org.link_source}}</p>
+                    </div>
                 </div>
             </a>
         </div>
