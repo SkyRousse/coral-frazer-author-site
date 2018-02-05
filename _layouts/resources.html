@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<div class="resources-page">
+    <section class="banner-section">
+        <header class="banner-header" role="heading">
+            <h1 class="mega">Interested in Learning More</h1>
+            <h2 class="h3">Check Out These Resources on the following topics</h2>
+        </header>
+    </section>
+    <section class="resources around-world gradient-bar">
+        {% assign us_around_world = site.data.inequality_resources.us_around_world %} {% assign articles = us_around_world.articles
+        %} {% assign orgs = us_around_world.orgs %}
+        <h3 class="h2">{{us_around_world.name}}</h3>
+        <div class="flex-container wrap">
+            {% for article in articles %}
+            <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+                <a class='link no-bling' target="_blank" href="{{ article.url }}">
+                    <div class='post-it'>
+                        <h4 class='h3 title'>{{article.title}}</h4>
+                        <h5 class='h4 author'>{{article.author}}</h5>
+                        <p class='publication'>{{article.publication}}</p>
+                        <div class='show-on-hover'>
+                            <p class='h3 link-title'>Visit Source</p>
+                            <p class='h4 link-address'>{{article.link_source}}</p>
+                            <p class='date'>{{article.date}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %} {% for org in orgs %}
+            <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+                <a class='link no-bling' target="_blank" href="{{ org.url }}">
+                    <div class='post-it'>
+                        <h4 class='h3 title'>{{org.title}}</h4>
+                        <h5 class='h4 author'>{{org.institution}}</h5>
+                        <div class='show-on-hover'>
+                            <p class='h3 link-title'>Visit Source</p>
+                            <p class='h4 link-address'>{{org.link_source}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="resources experiments gradient-bar">
+        {% assign experiments_resources = site.data.inequality_resources.experiments %} {% assign articles = experiments_resources.articles
+        %} {% assign orgs = experiments_resources.orgs %}
+        <h3 class="h2">{{experiments_resources.name}}</h3>
+        <div class="flex-container wrap">
+            {% for article in articles %}
+            <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+                <a class='link no-bling' target="_blank" href="{{ article.url }}">
+                    <div class='post-it'>
+                        <h4 class='h3 title'>{{article.title}}</h4>
+                        <h5 class='h4 author'>{{article.author}}</h5>
+                        <p class='publication'>{{article.publication}}</p>
+                        <div class='show-on-hover'>
+                            <p class='h3 link-title'>Visit Source</p>
+                            <p class='h4 link-address'>{{article.link_source}}</p>
+                            <p class='date'>{{article.date}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %} {% for org in orgs %}
+            <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
+                <a class='link no-bling' target="_blank" href="{{ org.url }}">
+                    <div class='post-it'>
+                        <h4 class='h3 title'>{{org.title}}</h4>
+                        <h5 class='h4 author'>{{org.institution}}</h5>
+                        <div class='show-on-hover'>
+                            <p class='h3 link-title'>Visit Source</p>
+                            <p class='h4 link-address'>{{org.link_source}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

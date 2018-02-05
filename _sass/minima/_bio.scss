@@ -1,0 +1,39 @@
+/**
+* about / bio
+*/
+
+.about-page .banner-section {
+  background: url('/assets/images/header-bg3.jpg');
+}
+
+
+.bio {
+
+  p {
+    text-align: left;
+  }
+
+  .flex-container {
+    overflow: visible;
+  }
+
+  .side1 {
+    position: sticky;
+    top:90px;
+    width: 20%;
+  }
+
+  @include for-tablet-landscape-up {
+    .side1 {
+      left: 33%;
+    }
+      background: linear-gradient(to right, 
+     $grey-color-light 0%, $grey-color-light 50%,
+    #fff 50%, #fff 100%) center no-repeat;
+  }
+
+  .side2 {
+    margin-top: -24%;
+  }
+
+}
