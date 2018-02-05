@@ -256,7 +256,19 @@ main {
   padding: $spacing-unit 0;
 
   //styles need for reveal
-  height: 430px;
+  height: 100vh;
+  @include for-tablet-portrait-up {
+    height: 90vh;
+  }
+  @include for-tablet-landscape-up {
+    height: 67vh;
+  }
+  @include for-desktop-up {
+    height: 64vh;
+  }
+  @include for-desktop-up {
+    height: 60vh;
+  }
   background-color: $grey-color-light;
   position: relative;
   z-index: 1;
