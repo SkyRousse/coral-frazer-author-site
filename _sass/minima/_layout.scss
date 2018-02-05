@@ -74,8 +74,11 @@
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
+    @include for-tablet-portrait-up {
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
 
@@ -95,17 +98,21 @@
       }
     }
     .submenu {
-      position: absolute;
-      top: 47px;
-      left: -30px;
-      padding: 10px 30px;
-      opacity: 0;
-      background-color: $background-color;
-      -ms-transition: opacity 290ms ease-in;
-      -webkit-transition: opacity 290ms ease-in;
-      -moz-transition: opacity 290ms ease-in;
-      -o-transition: opacity 290ms ease-in;
-      transition: opacity 290ms ease-in;
+      @include for-tablet-portrait-up {
+        position: absolute;
+        top: 47px;
+        left: -30px;
+        background-color: $background-color;
+        opacity: 0;
+        -ms-transition: opacity 290ms ease-in;
+        -webkit-transition: opacity 290ms ease-in;
+        -moz-transition: opacity 290ms ease-in;
+        -o-transition: opacity 290ms ease-in;
+        transition: opacity 290ms ease-in;
+        display: block;
+        padding: 20px 30px;
+      }
+      display: none;
     }
   }
 
@@ -135,7 +142,8 @@
 
     input:checked ~ .trigger {
       display: block;
-      padding-bottom: 5px;
+      padding-bottom: 0px;
+      border-bottom: 1px solid $grey-color-light;
       position: absolute;
       top: 74px;
       left: 0px;
@@ -147,12 +155,17 @@
 
     .page-link {
       display: block;
-      padding: 5px 10px;
-
+      padding: 1rem;
+      color: $grey-color-light;
       &:not(:last-child) {
-        margin-right: 0;
+        border-bottom: 1px solid $grey-color-light;
       }
-      margin-left: 20px;
+    }
+    .submenu .page-link{
+      color: $mauve-color;
+      border-bottom: 1px solid $grey-color-light;
+      background-color: $grey-color-light;
+      padding-left: 2.75rem;
     }
   }
 }
@@ -184,15 +197,6 @@ section {
   padding: $spacing-unit $spacing-unit/2;
 }
 
-section.resources {
-  &:first-of-type {
-    padding-top: $spacing-unit*3;
-  }
-  padding-bottom: $spacing-unit*3;
-  &:last-of-type {
-    padding-bottom: $spacing-unit*5;
-  }
-}
 
 /**
 * Text Block Section

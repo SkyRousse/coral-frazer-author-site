@@ -42,6 +42,15 @@ function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
 }
 
+$('.site-nav').find('.has-sub-menu').click(function () {
+    $(this).find('.submenu').slideToggle();
+})
+
+// $('.site-nav').find('.has-sub-menu').hover(function () {
+//     $(this).find('.submenu').fadeOut(100);
+//     $(this).find('.submenu').fadeIn(100);
+// });
+
 
 /** =================================================
     hide / show logo in footer

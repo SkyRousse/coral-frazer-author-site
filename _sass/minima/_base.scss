@@ -115,14 +115,14 @@ h4, .h4 { font-size: $h4-font-size; }
   h4, .h4 { @include relative-tablet-landscape-font-size($h4-font-size); }
  }
 @include for-desktop-up {
-  .mega { @include relative-desktop-font-size($mega-font-size); }
+  .mega { @include relative-desktop-font-size($mega-font-size +1rem); }
   h1, .h1 { @include relative-desktop-font-size($h1-font-size); }
   h2, .h2 { @include relative-desktop-font-size($h2-font-size); }
   h3, .h3 { @include relative-desktop-font-size($h3-font-size); }
   h4, .h4 { @include relative-desktop-font-size($h4-font-size); }
  }
 @include for-big-desktop-up {
-  .mega { @include relative-big-desktop-font-size($mega-font-size); }
+  .mega { @include relative-big-desktop-font-size($mega-font-size +1rem); }
   h1, .h1 { @include relative-big-desktop-font-size($h1-font-size); }
   h2, .h2 { @include relative-big-desktop-font-size($h2-font-size); }
   h3, .h3 { @include relative-big-desktop-font-size($h3-font-size); }

@@ -13,6 +13,14 @@
   }
 }
 
+section.resources {
+  &:first-of-type {
+    padding-top: $spacing-unit*3;
+  }
+  padding-bottom: $spacing-unit*3;
+
+}
+
 /**
 * Post it notes
 */
