@@ -1,6 +1,6 @@
 # Website for Author Coral Celeste Fazer
 
-[#### Dev site can be viewed here](https://skyrousse.github.io/coral-frazer-author-site/about/)
+[#### Dev site can be viewed here](https://skyrousse.github.io/coral-frazer-author-site/)
 
 #####   Coral Celeste Frazer has an M.A. in sociology from Princeton University and a long-standing
   interest in issues of inequality, collective action, and social justice. She writes nonfiction and
