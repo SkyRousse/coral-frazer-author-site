@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}. 
-title: Coral Frazer
+title: Coral Celeste Frazer
 email: coralcelestefrazer@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Coral Celeste Frazer has an M.A. in sociology from Princeton University and a long-standing
   interest in issues of inequality, collective action, and social justice. She writes nonfiction and
   fiction for teens and adults, as well as reading comprehension items for the Test of English as a
   Foreign Language (TOEFL).
-baseurl: "coral-frazer-author-site/" # the subpath of your site, e.g. /blog
+baseurl: "/coral-frazer-author-site" # the subpath of your site, e.g. /blog
 url: "coralcelestefrazer.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
@@ -34,7 +34,8 @@ purchaseLinks:
   - title: Amazon 
     url: http://a.co/aKQ0f6w
   - title: Lerner Books 
-    url: https://www.lernerbooks.com/Search/Pages/results.aspx?k=yqzpdka
+    url: https://www.lernerbooks.com/products/t/23517/9781512498868/economic-inequality
+    
 
 
 # Build settings

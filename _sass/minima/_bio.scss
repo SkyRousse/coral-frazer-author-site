@@ -3,7 +3,16 @@
 */
 
 .about-page .banner-section {
-  background: url('../assets/images/header-bg3.jpg');
+  background: url('../assets/images/fabric-bg.jpg');
+  background-size: 350px 500px;
+  opacity: .9;
+  h1 {
+    background-color:  rgba(39, 39, 39, 0.1);
+    text-shadow: 2px 2px 4px #000000;
+  }
+  h2 {
+    text-shadow: 2px 2px 4px #000000;
+  }
 }
 
 
@@ -18,6 +27,7 @@
   }
 
   .side1 {
+    position: -webkit-sticky;
     position: sticky;
     top:90px;
     width: 20%;
