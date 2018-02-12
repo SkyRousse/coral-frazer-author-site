@@ -16,7 +16,7 @@ layout: default
             {% for article in articles %}
             <div class="flex-item _875-phone-up _50-tablet-portrait-up _33-tablet-landscape-up _25-desktop-up post-it-container">
                 <a class='link no-bling' target="_blank" href="{{ article.url }}">
-                    <div class='post-it'>
+                    <div onclick="void(0)" class='post-it'>
                         <h4 class='h3 title'>{{article.title}}</h4>
                         <h5 class='h4 author'>{{article.author}}</h5>
                         <p class='publication'>{{article.publication}}</p>

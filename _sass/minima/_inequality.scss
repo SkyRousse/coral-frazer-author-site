@@ -87,22 +87,24 @@
   }
   
   h3:before {
+    font-family: 'IM Fell French Canon SC', serif;
     content: open-quote;
     font-size: 8rem;
     position: absolute;
     top: 0rem;
     margin-left: -4rem;
     color: $purple-color;
-    font-family: initial;
+    font-weight: 100;
     
   }
   h3:after {
+    font-family: 'IM Fell French Canon SC', serif;
     content: close-quote;
     font-size: 8rem;
     position: absolute;
     margin-left: .7rem;
     color: $purple-color;
-    font-family: initial;
+    font-weight: 100;
   }
 }
 
@@ -135,17 +137,17 @@
     top: -5rem;
     margin-left: 0rem;
     color: $purple-color;
-    font-family: initial;
+    font-family: 'IM Fell French Canon SC', serif;
     
   }
   h3:after {
     content: close-quote;
-    bottom: -2rem;
+    bottom: -2.1rem;
     font-size: 8rem;
     position: absolute;
     margin-left: .7rem;
     color: $purple-color;
-    font-family: initial;
+    font-family: 'IM Fell French Canon SC', serif;
   }
 }
 
