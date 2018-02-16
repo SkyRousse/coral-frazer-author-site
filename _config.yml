@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   interest in issues of inequality, collective action, and social justice. She writes nonfiction and
   fiction for teens and adults, as well as reading comprehension items for the Test of English as a
   Foreign Language (TOEFL).
-baseurl: "/coral-frazer-author-site" # the subpath of your site, e.g. /blog
-url: "coralcelestefrazer.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.coralcelestefrazer.com/" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 permalink: /:categories/:title

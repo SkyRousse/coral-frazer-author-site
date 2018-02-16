@@ -256,31 +256,19 @@ main {
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: $grey-color-light;
 
-  //styles need for reveal
-  // height: 90vh;
-  // @include for-tablet-portrait-up {
-  //   height: 90vh;
-  // }
-  // @include for-tablet-landscape-up {
-  //   height: 67vh;
-  // }
-  // @include for-desktop-up {
-  //   height: 64vh;
-  // }
-  // @include for-desktop-up {
-  //   height: 60vh;
-  // }
-  // background-color: $grey-color-light;
-  // position: relative;
-  // z-index: 1;
-  // .footer-inner {
-  //   position: fixed;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 100%;
-  // }
-  
+  @include for-desktop-up {
+    height: 64vh;
+    position: relative;
+    z-index: 1;
+    .footer-inner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
   .logo {
     text-align: center;
     text-transform: uppercase;
