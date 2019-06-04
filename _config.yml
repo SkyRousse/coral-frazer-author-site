@@ -12,35 +12,19 @@
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}. 
+# in the templates via {{ site.myvariable }}.
 title: Coral Celeste Frazer
 email: coralcelestefrazer@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Coral Celeste Frazer has an M.A. in sociology from Princeton University and a long-standing
-  interest in issues of inequality, collective action, and social justice. She writes nonfiction and
-  fiction for teens and adults, as well as reading comprehension items for the Test of English as a
-  Foreign Language (TOEFL).
+description: "Coral Celeste Frazer is a writer of nonfiction for teens. She has master’s degree in sociology from Princeton University and a long-standing interest in issues of inequality, collective action, and social justice. Her first book, Economic Inequality: The American Dream Under Siege, garnered starred reviews from Booklist and Kirkus Reviews and was chosen as one of the best books of the year by the Bank Street College of Education. She also writes fiction for adults and teens. She has lived in Colorado, Oregon, New Jersey, and Boston, and now resides in Norwich, England with her husband and son."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.coralcelestefrazer.com/" # the base hostname & protocol for your site, e.g. http://example.com
 gtm: true
 
 permalink: /:categories/:title
 
-purchaseLinks:
-  - title: Indiebound 
-    url: https://www.indiebound.org/search/book?keys=economic+inequality+frazer
-  - title: Barnes and Noble 
-    url: https://www.barnesandnoble.com/w/economic-inequality-coral-celeste-frazer/1127204973?ean=9781512431070
-  - title: Amazon 
-    url: http://a.co/aKQ0f6w
-  - title: Lerner Books 
-    url: https://www.lernerbooks.com/products/t/23517/9781512498868/economic-inequality
-    
-
-
 # Build settings
 markdown: kramdown
-theme: 
+theme:
 plugins:
   - jekyll-feed
 

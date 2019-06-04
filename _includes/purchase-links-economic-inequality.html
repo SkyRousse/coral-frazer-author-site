@@ -1,0 +1,9 @@
+<ul class="purchase-links">
+    <li class="link-heading">Economic Inequality <span class="link-heading_sub">The American Dream under Siege</span>
+    </li>
+    {% for link in site.data.purchase_links.economic_inequality %}
+    <li>
+        <a class="bling" href="{{link.url}}" alt="{{link.title}}" target="_blank">{{link.title}}</a>
+    </li>
+    {% endfor %}
+</ul>

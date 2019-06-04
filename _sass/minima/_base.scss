@@ -287,7 +287,25 @@ pre {
   li + li {
     padding-top: 5px;
   }
+
+  span.link-heading_sub {
+    font-size: 0.8rem;
+    display: block;
+  }
 }
+
+.footer-inner .purchase-links:first-of-type {
+  margin-top: 15px;
+}
+
+.footer-inner .column-heading {
+  text-shadow: 1px 1px 0 $yellow-color;
+  text-align: left;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  font-family: inherit;
+}
+
 
 
 /**

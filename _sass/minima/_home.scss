@@ -38,7 +38,7 @@
     -o-transition: background-color 580ms ease-in-out;
     transition: background-color 580ms ease-in-out;
   }
-  
+
   .featured-book:hover {
     img {
       filter:brightness(20%);
@@ -58,7 +58,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     opacity: 0;
- 
+
     -ms-transition: opacity 580ms ease-in-out;
     -webkit-transition: opacity 580ms ease-in-out;
     -moz-transition: opacity 580ms ease-in-out;
@@ -68,6 +68,10 @@
     .link-heading {
       color: #fff;
     }
+    .link-heading_sub {
+      font-size: .8rem;
+      display: block;
+    }
     a.bling:hover {
     border-bottom: 2px solid $light-mauve;
     -webkit-box-shadow: inset 0 -4px 0 $light-mauve;
@@ -75,7 +79,7 @@
     color: $yellow-color;
     }
   }
-    
+
 }
 
 .home .bottom-bar-cta {

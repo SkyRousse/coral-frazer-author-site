@@ -1,30 +1,31 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="logo">
-     <a class="home-link no-bling" href="{{ "/" | relative_url }}"><img src="{{ "/assets/images/magic-rainbow-footer.png" | relative_url }}" alt="rainbow silhouette logo" /></a>
+      <a class="home-link no-bling" href="{{ "/" | relative_url }}"><img
+          src="{{ "/assets/images/magic-rainbow-footer.png" | relative_url }}" alt="rainbow silhouette logo" /></a>
       <h2 class="footer-heading">{{ site.title | escape }}</h2>
     </div>
     <div class="flex-container wrap">
       <div class="flex-container wrap flex-item _75-desktop-up">
         <div class="flex-item _75-phone-up _33-tablet-landscape-up">
           <ul class="contact-list">
-            <li>
-              Get in Touch
-            </li>
+            <h5 class="column-heading">Get in Touch</h5>
             {% if site.email %}
             <li><a class="bling" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
           </ul>
         </div>
-    
+
         <div class="flex-item _75-phone-up _33-tablet-landscape-up">
-           {% include purchase-links.html %}
+          <h5 class="column-heading">Get Your Own Copy</h5>
+          {% include purchase-links-economic-inequality.html %}
+          {% include purchase-links-vote.html %}
         </div>
-    
+
         <div class="flex-item _75-phone-up _33-tablet-landscape-up">
           <p>{{ site.description | escape }}</p>
         </div>
-    
+
       </div>
     </div>
   </div>

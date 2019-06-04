@@ -1,0 +1,8 @@
+<ul class="purchase-links">
+    <li class="link-heading">VOTE! <span class="link-heading_sub">Women’s Fight for Access to the Ballot Box</span></li>
+    {% for link in site.data.purchase_links.vote %}
+    <li>
+        <a class="bling" href="{{link.url}}" alt="{{link.title}}" target="_blank">{{link.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
