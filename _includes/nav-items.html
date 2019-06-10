@@ -1,0 +1,23 @@
+<div class="trigger">
+  {% for item in site.data.nav.nav %}
+  {% if item.subfolderitems.size > 0 %}
+  <div class='has-sub-menu'><a class="page-link">{{ item.title}} </a>
+    <div class="submenu">
+      <div class="submenu-container">
+        {% for entry in item.subfolderitems %}
+        <div class="submenu-item">
+          <a class="page-link bling" href="{{ entry.url }}">
+            <p class="submenu-item-title">{{ entry.title }}</p>
+            <p class="submenu-item-subtitle">{{ entry.subTitle }}</p>
+            <img src="{{ entry.imgSrc }}">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <a class="page-link bling" href="{{ item.url }}">{{ item.title }}</a>
+  {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+nav:
+  - title: About
+    url: /about
+  - title: Books
+    url: /#
+    subfolderitems:
+      - title: Economic Inequality
+        subTitle: The American Dream under Siege
+        url: /books/economic-inequality
+        imgSrc: /assets/images/econmonic-inequality-book-cover-small.jpg
+      - title: VOTE!
+        subTitle: Women’s Fight for Access to the Ballot
+        url: /books/vote
+        imgSrc: /assets/images/VOTE-by-coral-fraser-cover-image.jpg
+  - title: Resources
+    url: /resources

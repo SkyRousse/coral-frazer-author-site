@@ -15,8 +15,11 @@
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
 
-  
+
   @include for-tablet-portrait-up {
+    > div {
+      position: relative;
+    }
     &.is-hidden {
       -ms-transition: opacity 290ms ease-in;
       -webkit-transition: opacity 290ms ease-in;
@@ -25,12 +28,12 @@
       transition: opacity 290ms ease-in;
       opacity: 0;
     }
-    
+
     &.is-visible {
       opacity: 1;
       // -webkit-transform: translate(0,0);
       // -webkit-transition: -webkit-transform .2s,background .3s,color .3s;
-  
+
       -ms-transition: opacity 290ms ease-in;
       -webkit-transition: opacity 290ms ease-in;
       -moz-transition: opacity 290ms ease-in;
@@ -85,7 +88,6 @@
   }
 
   .has-sub-menu {
-    position: relative;
     display: inline;
     line-height: 1.5;
 
@@ -97,15 +99,20 @@
       cursor: pointer;
       .submenu {
         opacity: 1;
+        z-index: 5;
       }
     }
     .submenu {
       @include for-tablet-portrait-up {
         position: absolute;
-        top: 47px;
-        left: -30px;
+        top: 100%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%);
+        width: 100%;
         background-color: $background-color;
         opacity: 0;
+        z-index: -1;
         -ms-transition: opacity 290ms ease-in;
         -webkit-transition: opacity 290ms ease-in;
         -moz-transition: opacity 290ms ease-in;
@@ -113,6 +120,29 @@
         transition: opacity 290ms ease-in;
         display: block;
         padding: 20px 30px;
+        .submenu-container {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 30px;
+        }
+        .submenu-item {
+          width: 200px;
+          max-height: inherit;
+          padding: 20px;
+          text-align: center;
+          border: 1px solid rgb(235,235,235);
+          margin: 30px;
+        }
+        .submenu-item img{
+          max-height: 150px;
+        }
+        .submenu-item-title {
+          font-size: 1rem;
+          margin-bottom: 7px;
+        }
+        .submenu-item-subtitle {
+          font-size: .9rem;
+        }
       }
       display: none;
     }
@@ -278,8 +308,8 @@ main {
     opacity: 0;
     transition: transform, opacity;
     transition-duration: .8s;
-    transition-timing-function: ease;  
-    
+    transition-timing-function: ease;
+
     &.show{
       transform: translateY(0);
       opacity: 1;
