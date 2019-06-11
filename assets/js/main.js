@@ -42,9 +42,10 @@ function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
 }
 
-$('.site-nav').find('.has-sub-menu').click(function () {
-    $(this).next('.submenu').slideToggle();
-})
+
+/** =================================================
+    hide / show submenu items
+================================================== */
 
 function hideActive() {
     $(this).removeClass('active');
@@ -60,7 +61,24 @@ function showSubMenu() {
     }
 };
 
-const $topNavItems = $('.site-nav .trigger .topLeveNav').mouseenter(showSubMenu);
+const $topNavItems = $('.site-nav .trigger .topLevelNav')
+    .mouseenter(showSubMenu)
+    .click(showSubMenu);
+
+//////
+//  handle mobile touch for toggling the submenu items
+
+function showSubMenuMobile() {
+    console.log('slide toggle called');
+    $(this).parent().next('.submenu').slideToggle();
+}
+
+var topLevelNavNodes = document.querySelectorAll('.site-nav .trigger .topLevelNav');
+var topLevelNavNodesArray = Array.from(topLevelNavNodes);
+topLevelNavNodesArray.forEach(function (node) {
+    node.addEventListener("touchstart", showSubMenuMobile, false);
+});
+
 
 /** =================================================
     hide / show logo in footer
