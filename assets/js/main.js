@@ -3,9 +3,6 @@
     Hide / show the master navigation menu
 ============================================ */
 
-console.log('Window Height is: ' + $(window).height());
-console.log('Document Height is: ' + $(document).height());
-
 var previousScroll = 0;
 
 $(window).scroll(function () {
@@ -84,22 +81,22 @@ topLevelNavNodesArray.forEach(function (node) {
     hide / show logo in footer
 ================================================== */
 
-var logoElement = $('footer .logo');
+var $logoElement = $('footer .logo');
 
-var footerTimerVar = setInterval(function () { footerAnimationTimer() }, 200);
+$(window).scroll(toggleLogoVisibility);
 
-function footerAnimationTimer() {
-
+function toggleLogoVisibility() {
     var windowCheck = $(window).scrollTop() + $(window).height();
     var docCheck = $(document).height() - 100;
-
     if (windowCheck > docCheck) {
+        if (!$logoElement.hasClass('show')) {
+            console.log('show the logo');
+            $logoElement.addClass('show');
+        }
 
-        $(logoElement).addClass('show');
-
-    } else if ($(logoElement).hasClass('show') && windowCheck > docCheck - 150) {
-
-        $(logoElement).removeClass('show');
+    } else if ($logoElement.hasClass('show') && windowCheck > docCheck - 150) {
+        console.log('hide the logo');
+        $logoElement.removeClass('show');
 
     }
 };
