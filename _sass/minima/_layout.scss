@@ -80,10 +80,7 @@
 
     // Gaps between nav items, but not on the last one
     @include for-tablet-portrait-up {
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+      margin-right: 20px;
     }
   }
 
@@ -97,59 +94,54 @@
 
     &:hover {
       cursor: pointer;
-      .submenu {
-        opacity: 1;
-        z-index: 5;
-      }
-    }
-    .submenu {
-      @include for-tablet-portrait-up {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%);
-        width: 100%;
-        background-color: $background-color;
-        opacity: 0;
-        z-index: -1;
-        -ms-transition: opacity 290ms ease-in;
-        -webkit-transition: opacity 290ms ease-in;
-        -moz-transition: opacity 290ms ease-in;
-        -o-transition: opacity 290ms ease-in;
-        transition: opacity 290ms ease-in;
-        display: block;
-        padding: 20px 30px;
-        .submenu-container {
-          display: flex;
-          justify-content: center;
-          padding-bottom: 30px;
-          border-top: 1px solid $yellow-color;
-          border-bottom: 6px solid $yellow-color;
-        }
-        .submenu-item {
-          width: 200px;
-          max-height: inherit;
-          padding: 20px;
-          text-align: center;
-          border: 1px solid rgb(235,235,235);
-          margin: 30px;
-        }
-        .submenu-item img{
-          max-height: 150px;
-        }
-        .submenu-item-title {
-          font-size: 1rem;
-          margin-bottom: 7px;
-        }
-        .submenu-item-subtitle {
-          font-size: .9rem;
-        }
-      }
-      display: none;
     }
   }
-
+  .submenu {
+    @include for-tablet-portrait-up {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%);
+      width: 100%;
+      background-color: $background-color;
+      -ms-transition: opacity 290ms ease-in;
+      -webkit-transition: opacity 290ms ease-in;
+      -moz-transition: opacity 290ms ease-in;
+      -o-transition: opacity 290ms ease-in;
+      transition: opacity 290ms ease-in;
+      opacity: 0;
+      padding: 20px 30px;
+      &.active {
+        opacity: 1;
+      }
+      .submenu-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        border-top: 1px solid $yellow-color;
+        border-bottom: 6px solid $yellow-color;
+      }
+      .submenu-item {
+        width: 200px;
+        max-height: inherit;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid rgb(235,235,235);
+        margin: 30px;
+      }
+      .submenu-item img{
+        max-height: 150px;
+      }
+      .submenu-item-title {
+        font-size: 1rem;
+        margin-bottom: 7px;
+      }
+      .submenu-item-subtitle {
+        font-size: .9rem;
+      }
+    }
+  }
 
   @include for-phone-only {
 

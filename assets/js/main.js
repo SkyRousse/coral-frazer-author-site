@@ -27,7 +27,7 @@ $(window).scroll(function () {
         } else {
             window.setTimeout(showNav, 300);
         }
-        /* 
+        /*
             Set the previous scroll value equal to the current scroll.
         */
         previousScroll = currentScroll;
@@ -43,14 +43,24 @@ function showNav() {
 }
 
 $('.site-nav').find('.has-sub-menu').click(function () {
-    $(this).find('.submenu').slideToggle();
+    $(this).next('.submenu').slideToggle();
 })
 
-// $('.site-nav').find('.has-sub-menu').hover(function () {
-//     $(this).find('.submenu').fadeOut(100);
-//     $(this).find('.submenu').fadeIn(100);
-// });
+function hideActive() {
+    $(this).removeClass('active');
+}
 
+function showSubMenu() {
+    // hide any currently active submenu els
+    $('.submenu').removeClass('active');
+    if ($(this).parent().hasClass('has-sub-menu')) {
+        const $activeSubMenu = $(this).parent().next('.submenu');
+        $activeSubMenu.addClass('active');
+        $activeSubMenu.mouseleave(hideActive);
+    }
+};
+
+const $topNavItems = $('.site-nav .trigger .topLeveNav').mouseenter(showSubMenu);
 
 /** =================================================
     hide / show logo in footer
@@ -65,7 +75,7 @@ function footerAnimationTimer() {
     var windowCheck = $(window).scrollTop() + $(window).height();
     var docCheck = $(document).height() - 100;
 
-    if ( windowCheck >  docCheck){
+    if (windowCheck > docCheck) {
 
         $(logoElement).addClass('show');
 
@@ -91,17 +101,17 @@ if ($('.about-page').length) {
     var bookPhoto = $('.about-page').find('img[data-about-photo="book"]');
     var bookParagraph = $('.about-page').find('p[data-about-position="3"]');
     var containerHeight = $('.about-page').height();
-    
+
     var babyParagraphPos = babyParagraph.offset().top;
     var rainbowParagraphPos = rainbowParagraph.offset().top;
     var bookParagraphPos = bookParagraph.offset().top;
-    
-    
+
+
     var imgTimerVar = setInterval(function () { aboutPageTimer() }, 500);
-    
+
     function aboutPageTimer() {
         var scrollPosition = $(window).scrollTop();
-        if (babyParagraphPos >= scrollPosition ) {
+        if (babyParagraphPos >= scrollPosition) {
             console.log('keep scrolling');
             $(babyPhoto).fadeIn();
             $(rainbowPhoto).fadeOut();
@@ -110,13 +120,12 @@ if ($('.about-page').length) {
             $(babyPhoto).fadeOut();
             $(rainbowPhoto).fadeIn();
             $(bookPhoto).fadeOut();
-            
+
         } else if (scrollPosition > bookParagraphPos) {
             $(rainbowPhoto).fadeOut();
             $(bookPhoto).fadeIn();
             $(babyPhoto).fadeOut();
         }
-    
+
     }
 };
-
